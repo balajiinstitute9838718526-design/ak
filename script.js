@@ -48,3 +48,6 @@ function updateTask() {
 
 setInterval(updateTask,1000);
 updateTask();
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('./sw.js');
+}
